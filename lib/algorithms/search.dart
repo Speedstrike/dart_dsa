@@ -22,10 +22,39 @@
 class Search {
   static int linearSearch<T>(List<T> collection, T target) {
     for(int index = 0; index < collection.length; ++index) {
-      if (collection[index] == target) {
+      if(collection[index] == target) {
         return index;
       } else {
         ++index;
+      }
+    }
+    return -1;
+  }
+
+  static int binarySearch<T>(List<T> collection, T target) {
+    int left = 0;
+    int right = collection.length - 1;
+    int middle = ((left + right) ~/ 2);
+
+    while(left <= right) {
+      if(middle == left || middle == right) {
+        return -1;
+      }
+      if(target != null) {
+        switch(collection[middle].toString().compareTo(target.toString()).sign) {
+          case 1: {
+            left = middle;
+            break;
+          }
+          case 0: {
+            return middle;
+          }
+          case -1: {
+            right = middle;
+            break;
+          }
+        }
+        middle = ((left + right) ~/ 2);
       }
     }
     return -1;

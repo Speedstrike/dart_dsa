@@ -19,6 +19,8 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
+import 'dart:math';
+
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
@@ -28,5 +30,10 @@ void main() {
   test("Linear search test", () {
     expect(Search.linearSearch([-67, 12, 0, 89, 21, -13, -90, 2, 1809, -128, 512], 21), 4);
     expect(Search.linearSearch([29, 82, -94, 40, 182, -1, 1127, -996, 23, 2, -256], -7), -1);
+  });
+  
+  test("Binary search test", () {
+    expect(Search.binarySearch([-9.81, -6.62607015e-34, 0, 6.67430e-11, 1, 1.61803, e, pi], 1.61803), 5);
+    expect(Search.binarySearch([-1.602e-19, -273.15, 1.38e-23, .577, 8.314, 3e8, 2147483647], 128), -1);
   });
 }
