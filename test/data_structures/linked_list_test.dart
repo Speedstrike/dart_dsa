@@ -21,10 +21,8 @@
 // SOFTWARE.
 import 'dart:math';
 
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
-
 import 'package:dart_dsa/data_structures/linked_list.dart';
+import 'package:test/test.dart';
 
 void main() {
   test("Push/peek test", () {

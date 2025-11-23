@@ -21,10 +21,8 @@
 // SOFTWARE.
 import 'dart:math';
 
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
-
 import 'package:dart_dsa/data_structures/deque.dart';
+import 'package:test/test.dart';
 
 void main() {
   test("Frontend test", () {

@@ -21,10 +21,8 @@
 // SOFTWARE.
 import 'dart:math';
 
-import 'package:test/expect.dart';
-import 'package:test/scaffolding.dart';
-
 import 'package:dart_dsa/algorithms/search.dart';
+import 'package:test/test.dart';
 
 void main() {
   test("Linear search test", () {
